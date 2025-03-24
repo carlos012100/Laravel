@@ -1,0 +1,25 @@
+services:
+  - name: laravel-app
+    type: web
+    runtime: docker
+    repo: https://github.com/carlos012100/Laravel.git
+    plan: free
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_KEY
+        sync: false
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        fromDatabase: ep-shy-wildflower-a5boyogw-pooler.us-east-2.aws.neon.tech
+      - key: DB_PORT
+        value: 5432
+      - key: DB_DATABASE
+        fromDatabase: laravelnp
+      - key: DB_USERNAME
+        fromDatabase: laravelnp_owner
+      - key: DB_PASSWORD
+        fromDatabase: npg_RK7Pw5bcrJst
