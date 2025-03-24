@@ -56,6 +56,7 @@ class WizardController extends Controller
     public function destroy(string $id)
     {
         Wizard::destroy($id);
+        
         return response()->json(['message' => 'Wizard deleted']);
     }
 }
