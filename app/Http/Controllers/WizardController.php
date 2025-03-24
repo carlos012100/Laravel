@@ -22,7 +22,7 @@ class WizardController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'age' => 'required|string|min:1',
+            'age' => 'required|interger|min:1',
             'magic_level' => 'required|integer|min:1',
         ]);
 
