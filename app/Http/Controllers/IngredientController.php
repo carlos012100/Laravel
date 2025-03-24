@@ -22,7 +22,7 @@ class IngredientController extends Controller
     {
         $request->validate([
             'ingredient_name' => 'required|string|max:255',
-            'price' => 'required|interger|min:1',
+            'price' => 'required|integer|min:1',
             'rarity' => 'required|string|max:50',
         ]);
 

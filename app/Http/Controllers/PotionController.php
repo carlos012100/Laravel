@@ -17,6 +17,7 @@ class PotionController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            
             'magical_name' => 'required|string|max:255',
             'description' => 'required|string|max:255',
             'curative' => 'required|boolean',
