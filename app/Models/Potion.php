@@ -18,7 +18,7 @@ class Potion extends Model
 
     public function ingredients()
     {
-        return $this->belongsToMany(ingredients::class, 'potions_ingredients', 'potion_id', 'ingredient_id')
+        return $this->belongsToMany(Ingredient::class, 'potions_ingredients', 'potion_id', 'ingredient_id')
                     ->withPivot('qty');
     }
     
