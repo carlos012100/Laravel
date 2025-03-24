@@ -43,11 +43,11 @@ class WizardController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $wizards = Wizard::findOrFail($id);
+        $wizard = Wizard::findOrFail($id);
         
-        $wizards->update($request->all());
+        $wizard->update($request->all());
 
-        return $wizards;
+        return $wizard;
     }
 
     /**
