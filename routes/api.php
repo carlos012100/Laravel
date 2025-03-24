@@ -10,6 +10,6 @@ Route::apiResource('potions', PotionController::class);  // Fixed comma
 Route::apiResource('ingredients', IngredientController::class);  // Fixed comma
 Route::apiResource('wizards', WizardController::class);
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
+// Route::get('/user', function (Request $request) {
+//     return $request->user();
+// })->middleware('auth:sanctum');
