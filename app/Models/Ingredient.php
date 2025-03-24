@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Ingredient;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -20,5 +20,4 @@ class Ingredient extends Model
         return $this->belongsToMany(Potion::class, 'potions_ingredients', 'ingredient_id', 'potion_id')
                     ->withPivot('qty');
     }
-
 }
