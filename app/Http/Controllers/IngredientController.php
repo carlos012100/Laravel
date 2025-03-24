@@ -43,10 +43,10 @@ class IngredientController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $ingredients = Ingredient::findOrFail($id);
-        $ingredients->update($request->all());
+        $ingredient = Ingredient::findOrFail($id);
+        $ingredient->update($request->all());
 
-        return $ingredients;
+        return $ingredient;
     }
 
     /**
